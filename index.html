@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たのしいクイズ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>たのしいクイズ</h1>
+            <div class="mascot">🎯</div>
+            <p class="subtitle">きみは なんもん せいかい できるかな？</p>
+            <button id="start-btn" class="btn btn-start">はじめる</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <div class="score-display">
+                    <span>スコア: </span>
+                    <span id="score">0</span>
+                </div>
+                <div class="question-counter">
+                    <span>もんだい: </span>
+                    <span id="question-number">1</span>
+                    <span>/10</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-box">
+                    <h2 id="question">もんだいがここにひょうじされます</h2>
+                </div>
+                
+                <div class="answers-grid">
+                    <button class="answer-btn" data-answer="0">
+                        <span class="answer-number">1</span>
+                        <span class="answer-text"></span>
+                    </button>
+                    <button class="answer-btn" data-answer="1">
+                        <span class="answer-number">2</span>
+                        <span class="answer-text"></span>
+                    </button>
+                    <button class="answer-btn" data-answer="2">
+                        <span class="answer-number">3</span>
+                        <span class="answer-text"></span>
+                    </button>
+                    <button class="answer-btn" data-answer="3">
+                        <span class="answer-number">4</span>
+                        <span class="answer-text"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h1>おつかれさま！</h1>
+            <div class="result-mascot">🏆</div>
+            <div class="result-score">
+                <p>あなたのスコア</p>
+                <p class="final-score"><span id="final-score">0</span> てん</p>
+                <p id="result-message"></p>
+            </div>
+            <button id="restart-btn" class="btn btn-restart">もういちど</button>
+        </div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
